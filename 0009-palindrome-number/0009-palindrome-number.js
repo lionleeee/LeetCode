@@ -1,15 +1,12 @@
-/**
- * @param {number} x
- * @return {boolean}
- */
-var isPalindrome = function(x) {
-    const MinNum = -2147483648; //-2^31 값
-    const MaxNum = 2147483647;  //2^31-1 값
-    
-    if( x >= 0){
-        var reverse = x.toString().split('').reverse().join('');
-        return x === Number(reverse);
-    }
-    return false;
-    
+function isPalindrome(x: number): boolean {
+    const reverse : number = Number(x.toString().split('').reverse().join(''));
+   if(reverse === x) return true;
+
+   return false; 
 };
+
+/*
+1. x를 string으로 나눈 후 배열로 split하기
+2. 뒤집은 다음에 다시 join
+3. 값 비교
+*/
